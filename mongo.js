@@ -3,7 +3,8 @@ var CRLF = "\n";
 var callbacks = [];
 
 conn.addListener("output", function (data) {
-  puts(data);
+  var result = data;
+  puts(result);
 });
 
 this.db = function(db_name) {
@@ -16,6 +17,6 @@ this.showDatabases = function() {
   conn.write(cmd);
 }
 
-this.runCommand = function(command) {
+this.run = function(command) {
   conn.write(command + CRLF);
 }
