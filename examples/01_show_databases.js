@@ -1,4 +1,4 @@
-var mongo = require("mongo.js");
+var mongo = require("../mongo.js");
 
 function runDemo() {
   mongo.showDatabases();
